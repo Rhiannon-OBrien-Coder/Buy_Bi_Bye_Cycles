@@ -1,10 +1,10 @@
 const mongoose = require('mongoose')
-const BikeSchema = require('./bike')
-const UserSchema = require('./user')
+const bikeSchema = require('./bike')
+const userSchema = require('./user')
 
 
-const Bikes = mongoose.model('Bikes', BikeSchema)
-const Users = mongoose.model('Users', UserSchema)
+const Bikes = mongoose.model('Bikes', bikeSchema)
+const Users = mongoose.model('Users', userSchema)
 
 module.exports = {
     Bikes,

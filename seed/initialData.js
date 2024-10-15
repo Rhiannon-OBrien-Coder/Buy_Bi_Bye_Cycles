@@ -1,5 +1,5 @@
 const db = require(`../db`)
-const {Bike, User} = require(`../models`)
+const {Bikes, Users} = require(`../models`)
 
 db.on(`error`, console.error.bind(console, `MongoDB connection error:`))
 
@@ -62,8 +62,30 @@ const main = async () => {
           image: 'kids-bike-1.jpg'
         }
       ]
-      await Bike.insertMany(bikeList)
+        const users= [
+    {
+        name: 'username1',
+        address: '123 fake street',
+        email: 'fakeemail.com',
+        phoneNumber: 5555555555
+    },
+    {
+        name: 'username2',
+        address: '124 fake street',
+        email: 'fakeemail.com',
+        phoneNumber: 5555555556
+    },
+    {
+        name: 'username3',
+        address: '125 fake street',
+        email: 'fakeemail.com',
+        phoneNumber: 5555555557
+    },]
+      await Bikes.insertMany(bikeList)
       console.log('Bikes Saved')
+
+      await Users.insertMany(users)
+  console.log("Created some users!")
     }
 const run = async () => {
     await main()
