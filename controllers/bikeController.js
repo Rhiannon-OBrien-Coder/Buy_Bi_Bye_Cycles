@@ -1,9 +1,8 @@
-const Bike = require('../models/bike')
-
+const { Bikes } = require('../models')
 
 const getAllBikes = async (req, res) => {
   try {
-    const bikes = await Bike.find({})
+    const bikes = await Bikes.find({})
     res.json(bikes)
   } catch (error) {
     console.error(error)
@@ -11,11 +10,10 @@ const getAllBikes = async (req, res) => {
   }
 }
 
-
 const getBikeById = async (req, res) => {
   try {
     const id = req.params.id;
-    const bike = await Bike.findById(id);
+    const bike = await Bikes.findById(id);
     if (!bike) throw new Error('404 Bike not found');
     res.json(bike);
   } catch (error) {
@@ -26,7 +24,7 @@ const getBikeById = async (req, res) => {
 
 const getBikeByType = async (req, res) => {
   try {
-      const bike = await Bike.find( {'type': req.params.type})
+      const bike = await Bikes.find( {'type': req.params.type})
       if (bike) {
           return res.json(bike);
       }
@@ -38,7 +36,7 @@ const getBikeByType = async (req, res) => {
 
 const getBikeByBrand = async (req, res) => {
   try {
-      const bike = await Bike.find( {'brand': req.params.brand})
+      const bike = await Bikes.find( {'brand': req.params.brand})
       if (bike) {
           return res.json(bike);
       }
@@ -50,7 +48,7 @@ const getBikeByBrand = async (req, res) => {
 
 const createBike = async (req, res) => {
   try {
-      const bike = await new Bike(req.body)
+      const bike = await new Bikes(req.body)
       await bike.save()
       return res.status(201).json({
           bike,
@@ -64,7 +62,7 @@ const createBike = async (req, res) => {
 const updateBike = async (req, res) => {
     try {
         let { id } = req.params;
-        let bike = await Bike.findByIdAndUpdate(id, req.body, { new: true })
+        let bike = await Bikes.findByIdAndUpdate(id, req.body, { new: true })
         if (bike) {
             return res.status(200).json(bike)
         }
@@ -78,7 +76,7 @@ const updateBike = async (req, res) => {
 const deleteBike= async (req, res) => {
     try {
         const { id } = req.params;
-        const deleted = await Bike.findByIdAndDelete(id)
+        const deleted = await Bikes.findByIdAndDelete(id)
         if (deleted) {
             return res.status(200).send("Bike has been deleted");
         }

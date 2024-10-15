@@ -1,9 +1,9 @@
-const User = require('../models/user')
+const { Users } = require('../models')
 const db = require('../db')
 
 const getAllUsers = async (req, res) => {
   try {
-    const users = await User.find({})
+    const users = await Users.find({})
     res.json(users)
   } catch (error) {
     console.error(error)
@@ -11,11 +11,10 @@ const getAllUsers = async (req, res) => {
   }
 }
 
-
 const getUserById = async (req, res) => {
   try {
     const id = req.params.id;
-    const user = await User.findById(id);
+    const user = await Users.findById(id);
     if (!user) throw new Error('404 User not found');
     res.json(user);
   } catch (error) {
@@ -24,32 +23,15 @@ const getUserById = async (req, res) => {
   }
 }
 
-module.exports = {
-  getAllUsers,
-  getUserById
-}
-
-const allUsers = async () => {
-  const users = await User.find()
-  console.log('All Users:', users)
-}
-
-const findUsers = async () => {
-  const user = await User.findOne()
-  console.log("User Found:", )
-}
-
-
 const createUser = async () => {
-  const user = await User.findOne()
+  const user = await Users.findOne()
 
 }
-
 
 const updateUser = async () => {
   const updatedUser = await User.findOneAndUpdate(
-    {  },// what you are adding to
-    { $set: {  } },// what are you adding
+    {},// what you are adding to
+    { $set: {} },// what are you adding
     { new: true, upsert: false } // makes sure that new document is not made
   );
 
@@ -62,24 +44,14 @@ const updateUser = async () => {
 
 
 const deleteUser = async () => {
-  let deleted = await User.deleteOne({})//what are you deleting
+  let deleted = await Users.deleteOne({})//what are you deleting
   console.log("Deleted User:", deleted)
 }
 
-
-async function main() {
-  try {
-    
-    // await findUser()
-    // await createUser()
-    // await createUser()
-    // await updateUser()
-    // await deleteUser()
-  } catch (error) {
-    console.log("Error:", error)
-  } finally {
-    await db.close()
-  }
+module.exports = {
+  getAllUsers,
+  getUserById,
+  createUser,
+  updateUser,
+  deleteUser
 }
-
-main()
