@@ -23,8 +23,9 @@ const getBikeById = async (req, res) => {
 }
 
 const getBikeByType = async (req, res) => {
-  try {
+  try { 
       const bike = await Bikes.find( {'type': req.params.type})
+      console.log(bike)
       if (bike) {
           return res.json(bike);
       }

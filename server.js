@@ -15,12 +15,13 @@ app.get('/', (req, res) => {
 })
 
 app.get('/bikes', bikeController.getAllBikes)
+
+app.get('/bikes/types/:type', bikeController.getBikeByType)
+app.get('/bikes/brands/:brand', bikeController.getBikeByBrand)
 app.get('/bikes/:id', bikeController.getBikeById)
-// app.get('/bikes/types/:type', bikeController.getBikeByType)
-// app.get('/bikes/brand/:Brand', bikeController.getBikeByBrand)
-// app.post('/bikes', bikeController.createBike)
-// app.put('/bikes/:id', bikeController.updateBike)
-// app.delete('/bikes/:id', bikeController.deleteBike)
+app.post('/bikes', bikeController.createBike)
+app.put('/bikes/:id', bikeController.updateBike)
+app.delete('/bikes/:id', bikeController.deleteBike)
 
 app.get('/users', userController.getAllUsers)
 app.get('/users/:id', userController.getUserById)
