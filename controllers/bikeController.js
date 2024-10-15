@@ -1,4 +1,4 @@
-const Bike = require('../models/Bike')
+const Bike = require('../models/bike')
 
 
 const getAllBikes = async (req, res) => {
