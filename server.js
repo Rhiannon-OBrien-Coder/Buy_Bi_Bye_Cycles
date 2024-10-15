@@ -2,7 +2,7 @@ const express = require(`express`)
 const cors = require(`cors`)
 const PORT = process.env.PORT || 3001
 const db = require(`./db`)
-const { getAllBikes, getBikeById} = require(`./models`)
+const { getAllBikes, getBikeById, getAllUsers, getUserById} = require(`./models`)
 
 const app = express()
 
@@ -15,3 +15,6 @@ app.get('/', (req, res) => {
 
 app.get('/bikes', getAllBikes)
 app.get('/bikes/:id', getBikeById)
+
+app.get('/users', getAllUsers)
+app.get('/users/:id', getUserById)
