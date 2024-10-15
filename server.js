@@ -19,3 +19,8 @@ app.get('/bikes/:id', getBikeById)
 
 app.get('/users', getAllUsers)
 app.get('/users/:id', getUserById)
+
+
+app.listen(PORT, () => {
+  console.log(`Express server listening on port ${PORT}`)
+})

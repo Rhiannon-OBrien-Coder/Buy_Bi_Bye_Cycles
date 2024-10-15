@@ -1,7 +1,7 @@
 const mongoose = require('mongoose')
 const  { Schema } = require('mongoose')
 
-const Bike = new Schema(
+const BikeSchema = new Schema(
     {
         name: { type: String, required: true },
         price: { type: Number, required: true },

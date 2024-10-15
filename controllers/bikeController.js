@@ -1,5 +1,5 @@
 const Bike = require('../models/bike')
-
+const db = require('../db')
 
 const getAllBikes = async (req, res) => {
   try {
