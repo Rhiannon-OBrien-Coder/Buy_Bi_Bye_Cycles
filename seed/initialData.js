@@ -8,56 +8,56 @@ const main = async () => {
         {
           name: 'Road Bike 1',
           price: 1200,
-          type: 'Road',
-          brand: 'Specialized',
+          type: 'road',
+          brand: 'specialized',
           description: 'Designed for speed and efficiency on smooth tarmac roads. Perfect for racing and long-distance rides.',
           image: 'road-bike-1.jpg'
         },
         {
           name: 'Mountain Bike 1',
           price: 1500,
-          type: 'Mountain',
-          brand: 'Specialized',
+          type: 'mountain',
+          brand: 'specialized',
           description: 'Tough and ready for rough terrain. Comes with front and rear suspension for tackling steep ascents and descents.',
           image: 'mountain-bike-1.jpg'
         },
         {
           name: 'Hybrid Commuter Bike 1',
           price: 800,
-          type: 'Hybrid',
-          brand: 'Specilized',
+          type: 'hybrid',
+          brand: 'specilized',
           description: 'An all-around bike great for urban commuting and leisure rides, offering a blend of speed and comfort.',
           image: 'hybrid-bike-1.jpg'
         },
         {
           name: 'Touring Bike 1',
           price: 1300,
-          type: 'Touring',
-          brand: 'Specialized',
+          type: 'touring',
+          brand: 'specialized',
           description: 'Ideal for long-distance touring, built to carry heavy loads while remaining comfortable over long distances.',
           image: 'touring-bike-1.jpg'
         },
         {
           name: 'Folding Bike 1',
           price: 900,
-          type: 'Folding',
-          brand: 'Specialized',
+          type: 'folding',
+          brand: 'specialized',
           description: 'A convenient bike that folds up easily for transport or storage, great for urban commuters and leisure riders.',
           image: 'folding-bike-1.jpg'
         },
         {
           name: 'BMX Bike 1',
           price: 600,
-          type: 'BMX',
-          brand: 'Specialized',
+          type: 'bmx',
+          brand: 'specialized',
           description: 'A bike built for tricks, stunts, and racing in BMX competitions. Durable and ready for extreme use.',
           image: 'bmx-bike-1.jpg'
         },
         {
           name: 'Kids Bike 1',
           price: 400,
-          type: 'Kids',
-          brand: 'Specialized',
+          type: 'kids',
+          brand: 'specialized',
           description: 'A safe and fun bike designed for children, perfect for learning to ride and exploring the outdoors.',
           image: 'kids-bike-1.jpg'
         }
