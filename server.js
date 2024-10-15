@@ -2,8 +2,8 @@ const express = require(`express`)
 const cors = require(`cors`)
 const PORT = process.env.PORT || 3001
 const db = require(`./db`)
-const { getAllBikes, getBikeById, getBikeByType, createBike, updateBike,
-deleteBike, getBikeByBrand, getAllUsers, getUserById} = require(`./models`)
+const { getAllBikes, getBikeById} = require(`./controllers/bikeController`)
+const { getAllUsers, getUserById} = require(`./controllers/userController`)
 
 const app = express()
 
