@@ -23,3 +23,8 @@ app.put('/bikes/:id', updateBike)
 app.delete('/bikes/:id', deleteBike)
 app.get('/users', getAllUsers)
 app.get('/users/:id', getUserById)
+
+
+app.listen(PORT, () => {
+  console.log(`Express server listening on port ${PORT}`)
+})

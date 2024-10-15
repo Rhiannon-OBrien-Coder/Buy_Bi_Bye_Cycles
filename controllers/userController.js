@@ -1,5 +1,5 @@
 const User = require('../models/user')
-
+const db = require('../db')
 
 const getAllUsers = async (req, res) => {
   try {

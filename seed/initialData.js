@@ -62,6 +62,8 @@ const main = async () => {
           image: 'kids-bike-1.jpg'
         }
       ]
+      await Bike.insertMany(bikeList)
+      console.log('Bikes Saved')
     }
 const run = async () => {
     await main()
