@@ -81,6 +81,7 @@ footer {
 #imgFooter {
   display: flex;
   align-items: flex-end;
+  justify-content: space-between;
 }
 
 #myAccount-btn {
