@@ -25,7 +25,9 @@ app.delete('/bikes/:id', bikeController.deleteBike)
 
 app.get('/users', userController.getAllUsers)
 app.get('/users/:id', userController.getUserById)
-
+app.post('/users', userController.createUser)
+app.put('/users/:id', userController.updateUser)
+app.delete('/users/:id', userController.deleteUser)
 
 app.listen(PORT, () => {
   console.log(`Express server listening on port ${PORT}`)
