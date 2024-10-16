@@ -1,8 +1,21 @@
-body,
-p,
-button {
+body{
   margin: 0;
   padding: 0;
+  background-color: #cad8a3;
+  color: #372324;
+}
+
+button{
+  padding: 10;
+  margin: 0;
+  border-radius: 25;
+  color: #372324;
+  background-color: #cad8a3;
+}
+
+p{
+  padding: 0;
+  margin: 0;
 }
 
 header {
@@ -14,14 +27,14 @@ header {
 }
 
 #nav-belt {
-  background-color: grey;
+  background-color: #f66024;
   display: flex;
   justify-content: space-between;
   padding: 10px;
 }
 
 #nav-main {
-  background-color: rgb(166, 237, 170);
+  background-color: #fda701;
   display: flex;
   justify-content: space-around;
   padding: 15px 0;
