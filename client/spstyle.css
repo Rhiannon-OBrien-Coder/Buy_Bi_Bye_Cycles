@@ -28,6 +28,15 @@ p{
   margin: 0;
 }
 
+h1 {
+  text-align: center;
+  padding: 40px
+}
+
+ul {
+  list-style-type: none;
+}
+
 main {
   font-family: "Cormorant", serif;
   font-size: 15pt;
@@ -39,7 +48,9 @@ main {
 }
 
 .filters {
-  width: 200px;
+  width: 300px;
+  height: 500px;
+  border-radius: 10px;
   background-color: #cad8a3;
   color: #372324;
 }
@@ -47,6 +58,22 @@ main {
 .listings {
   button {
     margin: 60px;
+    width: 200px;
+    height: 200px;
+  }
+}
+
+.currentPage {
+  text-align: center;
+}
+
+.nextPage {
+  display: flex;
+  justify-content: flex-end;
+  button {
+    width: 150px;
+    margin: 40px;
+    background-color: #fda701;
   }
 }
 
