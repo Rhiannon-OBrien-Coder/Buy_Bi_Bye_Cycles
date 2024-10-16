@@ -1,16 +1,26 @@
 body{
   margin: 0;
   padding: 0;
-  background-color: #cad8a3;
-  color: #372324;
+  background-color: #372324;
+  color: #cad8a3;
+  font-family: "Cormorant", serif;
+  font-size: 15pt;
+  font-weight: 500;
 }
 
 button{
-  padding: 10;
+  padding: 20;
+  width: 80px;
+  height: 40px;
   margin: 0;
-  border-radius: 25;
+  border: #f66024;
+  border-radius: 10px;
+  border-width: 5px;
   color: #372324;
-  background-color: #cad8a3;
+  background-color: #f66024;
+  font-family: "Cormorant", serif;
+  font-size: 15pt;
+  font-weight: 500;
 }
 
 p{
@@ -18,8 +28,33 @@ p{
   margin: 0;
 }
 
-header {
+main {
+  font-family: "Cormorant", serif;
+  font-size: 15pt;
+  font-weight: 500;
+  text-align: center;
+  padding: 40px
+}
 
+#buttons {
+  display: flex;
+  justify-content: space-between;
+  padding: 80px;
+  button {
+    width: 200px;
+    height: 100px;
+  }
+  #buyGuideBtn {
+    background-color: #cad8a3;
+  }
+  #aboutBtn {
+    background-color: #fda701;
+  }
+}
+
+#imgFooter {
+  display: flex;
+  align-items: flex-end;
 }
 
 #myAccount-btn {
@@ -27,7 +62,7 @@ header {
 }
 
 #nav-belt {
-  background-color: #f66024;
+  background-color: #cad8a3;
   display: flex;
   justify-content: space-between;
   padding: 10px;
@@ -40,3 +75,59 @@ header {
   padding: 15px 0;
 }
 
+section {
+  display: none;
+  flex-direction: row;
+  justify-content: center;
+  padding: 5em;
+}
+
+.account-options {
+  background-color: bisque;
+  display: flex;
+  flex-direction: column;
+  width: 5em;
+  margin-right: 2em;
+  text-align: center;
+  padding-top: 2em;
+  font-size: 20px;
+  border-right: solid 3px black;
+}
+
+.account-options b {
+  margin-bottom: 4em;
+}
+
+.profile-container {
+  background-color: paleturquoise;
+  display: flex;
+  flex-direction: column;
+  width: 60%;
+  padding: 2.5em;
+  font-size: 23px;
+  border: solid 2px black;
+}
+
+.profile-labels label, .profile-inputs p {
+  margin-bottom: 2em;
+}
+
+.profile-info {
+  display: flex;
+  justify-content: space-around;
+}
+
+label {
+  display: block;
+}
+
+.text-input {
+  display: none;
+}
+
+.profile-btn {
+  width: 5em;
+  margin: auto;
+  font-size: 20px;
+  padding: 8px;
+}
