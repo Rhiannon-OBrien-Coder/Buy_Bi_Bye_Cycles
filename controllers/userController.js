@@ -13,6 +13,7 @@ const getAllUsers = async (req, res) => {
 
 const getUserByEmail = async (req, res) => {
   try {
+    console.log(req.params.email)
       const userEmail = await Users.find( {'email': req.params.email})
       if (userEmail) {
           return res.json(userEmail);
@@ -25,6 +26,8 @@ const getUserByEmail = async (req, res) => {
 
 const getUserById = async (req, res) => {
   try {
+    console.log(`gettting id`)
+    console.log(req.params.id)
     const id = req.params.id;
     const user = await Users.findById(id);
     if (!user) throw new Error('404 User not found');
