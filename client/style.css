@@ -2,7 +2,7 @@ body{
   margin: 0;
   padding: 0;
   background-color: #372324;
-  color: #372324;
+  color: #cad8a3;
   font-family: "Cormorant", serif;
   font-size: 15pt;
   font-weight: 500;
@@ -14,8 +14,8 @@ button{
   height: 40px;
   margin: 0;
   border: #f66024;
-  border-radius: 20px;
-  border-width: 1px;
+  border-radius: 10px;
+  border-width: 5px;
   color: #372324;
   background-color: #f66024;
   font-family: "Cormorant", serif;
@@ -28,7 +28,34 @@ p{
   margin: 0;
 }
 
-header {}
+main {
+  font-family: "Cormorant", serif;
+  font-size: 15pt;
+  font-weight: 500;
+  text-align: center;
+  padding: 40px
+}
+
+#buttons {
+  display: flex;
+  justify-content: space-between;
+  padding: 80px;
+  button {
+    width: 200px;
+    height: 100px;
+  }
+  #buyGuideBtn {
+    background-color: #cad8a3;
+  }
+  #aboutBtn {
+    background-color: #fda701;
+  }
+}
+
+#imgFooter {
+  display: flex;
+  align-items: flex-end;
+}
 
 #myAccount-btn {
   display: none;
