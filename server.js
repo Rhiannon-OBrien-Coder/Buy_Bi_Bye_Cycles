@@ -24,6 +24,7 @@ app.put('/bikes/:id', bikeController.updateBike)
 app.delete('/bikes/:id', bikeController.deleteBike)
 
 app.get('/users', userController.getAllUsers)
+app.get('/users/:email', userController.getUserByEmail)
 app.get('/users/:id', userController.getUserById)
 app.post('/users', userController.createUser)
 app.put('/users/:id', userController.updateUser)
