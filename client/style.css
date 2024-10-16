@@ -1,0 +1,29 @@
+body,
+p,
+button {
+  margin: 0;
+  padding: 0;
+}
+
+header {
+
+}
+
+#myAccount-btn {
+  display: none;
+}
+
+#nav-belt {
+  background-color: grey;
+  display: flex;
+  justify-content: space-between;
+  padding: 10px;
+}
+
+#nav-main {
+  background-color: rgb(166, 237, 170);
+  display: flex;
+  justify-content: space-around;
+  padding: 15px 0;
+}
+
