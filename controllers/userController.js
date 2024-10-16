@@ -11,6 +11,18 @@ const getAllUsers = async (req, res) => {
   }
 }
 
+const getUserByEmail = async (req, res) => {
+  try {
+      const userEmail = await Users.find( {'email': req.params.email})
+      if (userEmail) {
+          return res.json(userEmail);
+      }
+      return res.status(404).send('email not found');
+  } catch (error) {
+      return res.status(500).send(error.message);
+  }
+}
+
 const getUserById = async (req, res) => {
   try {
     const id = req.params.id;
@@ -23,34 +35,50 @@ const getUserById = async (req, res) => {
   }
 }
 
-const createUser = async () => {
-  const user = await Users.findOne()
-
-}
-
-const updateUser = async () => {
-  const updatedUser = await User.findOneAndUpdate(
-    {},// what you are adding to
-    { $set: {} },// what are you adding
-    { new: true, upsert: false } // makes sure that new document is not made
-  );
-
-  if (updatedUser) {
-    console.log("User Updated:", updatedUser);
-  } else {
-    console.log("No User found with the given condition.")
+const createUser = async (req, res) => {
+  try {
+      const user = await new Users(req.body)
+      await user.save()
+      return res.status(201).json({
+          user,
+      });
+  } catch (error) {
+      return res.status(500).json({ error: error.message })
   }
 }
 
 
-const deleteUser = async () => {
-  let deleted = await Users.deleteOne({})//what are you deleting
-  console.log("Deleted User:", deleted)
+const updateUser = async (req, res) => {
+    try {
+        let { id } = req.params;
+        let user = await Users.findByIdAndUpdate(id, req.body, { new: true })
+        if (user) {
+            return res.status(200).json(user)
+        }
+        throw new Error("user not found")
+    } catch (error) {
+        return res.status(500).send(error.message);
+    }
+}
+
+
+const deleteUser= async (req, res) => {
+    try {
+        const { id } = req.params;
+        const deleted = await Users.findByIdAndDelete(id)
+        if (deleted) {
+            return res.status(200).send("user has been deleted");
+        }
+        throw new Error("user not found");
+    } catch (error) {
+        return res.status(500).send(error.message);
+    }
 }
 
 module.exports = {
   getAllUsers,
   getUserById,
+  getUserByEmail,
   createUser,
   updateUser,
   deleteUser
