@@ -1,6 +1,11 @@
-body{
+body,
+p,
+button {
   margin: 0;
   padding: 0;
+}
+
+body{
   background-color: #372324;
   color: #cad8a3;
   font-family: "Cormorant", serif;
@@ -9,10 +14,8 @@ body{
 }
 
 button{
-  padding: 20;
   width: 80px;
   height: 40px;
-  margin: 0;
   border: #f66024;
   border-radius: 10px;
   border-width: 5px;
@@ -21,11 +24,17 @@ button{
   font-family: "Cormorant", serif;
   font-size: 15pt;
   font-weight: 500;
+  cursor: pointer;
 }
 
-p{
-  padding: 0;
-  margin: 0;
+a {
+  text-decoration: none;
+  font-size: 1.5em;
+  color: black;
+}
+
+a:hover {
+  text-decoration: underline;
 }
 
 h1 {
@@ -48,8 +57,10 @@ main {
 }
 
 footer {
+  background-color: gray;
   display: flex;
   justify-content:space-around;
+  align-items: center;
 }
 
 .filters {
@@ -62,9 +73,14 @@ footer {
 
 .listings {
   button {
-    margin: 60px;
-    width: 225px;
+    margin: 30px;
+    width: 260px;
     height: 225px;
+
+    img {
+      width: 150px;
+      height: 100px;
+    }
   }
 }
 
@@ -82,6 +98,11 @@ footer {
   display: flex;
   align-items: flex-end;
   justify-content: space-between;
+
+  img {
+    max-width: 100px;
+    height: auto;
+  }
 }
 
 #myAccount-btn {
@@ -92,6 +113,7 @@ footer {
   background-color: #cad8a3;
   display: flex;
   justify-content: space-between;
+  align-items: center;
   padding: 10px;
 }
 
@@ -100,4 +122,8 @@ footer {
   display: flex;
   justify-content: space-around;
   padding: 15px 0;
+}
+
+#logo img {
+  width: 150px;
 }

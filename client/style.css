@@ -1,18 +1,24 @@
-body{
+body,
+p,
+button {
   margin: 0;
   padding: 0;
+}
+
+body {
   background-color: #372324;
-  color: #cad8a3;
   font-family: "Cormorant", serif;
   font-size: 15pt;
   font-weight: 500;
 }
 
-button{
-  padding: 20;
+h1 {
+  color: #cad8a3;
+}
+
+button {
   width: 80px;
   height: 40px;
-  margin: 0;
   border: #f66024;
   border-radius: 10px;
   border-width: 5px;
@@ -21,11 +27,7 @@ button{
   font-family: "Cormorant", serif;
   font-size: 15pt;
   font-weight: 500;
-}
-
-p{
-  padding: 0;
-  margin: 0;
+  cursor: pointer;
 }
 
 main {
@@ -36,17 +38,30 @@ main {
   padding: 40px
 }
 
+a {
+  text-decoration: none;
+  font-size: 1.5em;
+  color: black;
+}
+
+a:hover {
+  text-decoration: underline;
+}
+
 #buttons {
   display: flex;
   justify-content: space-between;
   padding: 80px;
+
   button {
     width: 200px;
     height: 100px;
   }
+
   #buyGuideBtn {
     background-color: #cad8a3;
   }
+
   #aboutBtn {
     background-color: #fda701;
   }
@@ -56,17 +71,34 @@ main {
   display: flex;
   align-items: flex-end;
   justify-content: space-between;
+
+  img {
+    max-width: 100px;
+    height: auto;
+  }
+}
+
+#logo img {
+  width: 150px;
 }
 
 #myAccount-btn {
   display: none;
+  width: 8em;
+  margin-left: 20px;
 }
 
 #nav-belt {
   background-color: #cad8a3;
   display: flex;
   justify-content: space-between;
+  align-items: center;
   padding: 10px;
+}
+
+.login-container {
+  display: flex;
+  align-items: center;
 }
 
 #nav-main {
@@ -76,7 +108,7 @@ main {
   padding: 15px 0;
 }
 
-section {
+#user-profile {
   display: none;
   flex-direction: row;
   justify-content: center;
@@ -109,7 +141,8 @@ section {
   border: solid 2px black;
 }
 
-.profile-labels label, .profile-inputs p {
+.profile-labels label,
+.profile-inputs p {
   margin-bottom: 2em;
 }
 
@@ -122,20 +155,23 @@ label {
   display: block;
 }
 
-.text-input {
+.profile-input {
   display: none;
+  margin-bottom: 4em;
 }
 
-.profile-btn {
+#profile-edit, #profile-save {
   width: 5em;
   margin: auto;
   font-size: 20px;
   padding: 8px;
 }
 
+#profile-save {
+  display: none;
+}
+
 .login-btn {
   display: block;
   flex-direction: row;
-  padding: 2em;
-  
 }
